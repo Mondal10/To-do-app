@@ -1,0 +1,24 @@
+{
+  "name": "to-do-app",
+  "version": "1.0.0",
+  "description": "Basic to do app using node js with post and delete functionality ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mondal10/To-do-app.git"
+  },
+  "author": "Amit Mondal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mondal10/To-do-app/issues"
+  },
+  "homepage": "https://github.com/Mondal10/To-do-app#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4"
+  }
+}
