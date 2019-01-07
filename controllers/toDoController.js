@@ -1,17 +1,21 @@
 //Used to manipulate the data(get/post/delete) and Handle the route
 var bodyParser = require('body-parser');
-
+var uuid = require('uuid');
 var urlEncodedParser = bodyParser.urlencoded({
     extended: false
 });
 
 var data = [{
+    id: uuid(),
     item: 'get milk'
 }, {
+    id: uuid(),
     item: 'play fifa'
 }, {
+    id: uuid(),
     item: 'sleep'
 }, {
+    id: uuid(),
     item: 'Gym'
 }];
 
@@ -26,13 +30,13 @@ module.exports = function (app) {
     });
 
     app.post('/todo', urlEncodedParser, function (req, res) {
-        data.push(req.body);
+        data.push({id: uuid(),item: req.body.item});
         res.json(data);
     });
 
     app.delete('/todo/:item', function (req, res) {
         data = data.filter(function (todo) {
-            return todo.item.replace(/ /g, '-') !== req.param.item;
+            return todo.id !== req.params.item;
         });
         res.json(data)
     });

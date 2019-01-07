@@ -12,7 +12,6 @@ $(document).ready(function () {
             data: todo,
             success: function (data) {
                 location.reload();
-                // console.log("Stardteett", $('form input').val);
             }
         });
         return false;
@@ -20,11 +19,10 @@ $(document).ready(function () {
 
 
     $('li').on('click', function () {
-        var item = $(this).text().replace(/ /g, "-");
-        console.log($(this).text());
+        var itemId = $(this).attr('id');
         $.ajax({
             type: 'DELETE',
-            url: '/todo/' + item,
+            url: '/todo/' + itemId,
             success: function (data) {
                 location.reload();
             }

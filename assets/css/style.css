@@ -7,7 +7,8 @@ body {
 #todo-table {
     position: relative;
     width: 95%;
-    background: #090d13;
+    background: #2a3038;
+    border-radius: 20px;
     margin: 0 auto;
     padding: 20px;
     box-sizing: border-box;
@@ -25,6 +26,7 @@ input[type="text"] {
     padding: 20px;
     background: #181c22;
     border: 0;
+    border-radius: 20px;
     float: left;
     font-size: 20px;
     color: #989898;
@@ -34,8 +36,9 @@ button {
     padding: 20px;
     width: 30%;
     float: left;
-    background: #23282e;
+    background: #4c5661;
     border: 0;
+    border-radius: 20px;
     box-sizing: border-box;
     color: #fff;
     cursor: pointer;
@@ -60,6 +63,7 @@ li {
 
 li:hover {
     text-decoration: line-through;
+    border-radius: 20px; 
     background: rgba(0, 0, 0, 0.2);
 }
 
@@ -68,4 +72,5 @@ h1 {
     background-size: 300px 100px;
     height: 90px;
     margin-bottom: 0;
+    margin-top: 30px;
 }
