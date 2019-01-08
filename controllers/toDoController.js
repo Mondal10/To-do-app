@@ -46,7 +46,11 @@ module.exports = function (app) {
 
     app.delete('/:item', function (req, res) {
         //Delete the requested/clicked item(in view) from mongoDB
-        Todo.find({id: req.params.item}).remove(function(err,data){
+        /*Todo.find({id: req.params.item}).remove(function(err,data){
+            if(err) throw err;
+            res.json(data)
+        });   .remove is deprecated*/
+        Todo.deleteOne({id: req.params.item},function(err,data){
             if(err) throw err;
             res.json(data)
         }); 
