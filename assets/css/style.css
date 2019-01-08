@@ -1,5 +1,5 @@
 body {
-    background: #0d1521;
+    background: #4c5661;
     font-family: tahoma;
     color: #989898;
 }
@@ -73,4 +73,19 @@ h1 {
     height: 90px;
     margin-bottom: 0;
     margin-top: 30px;
+}
+
+.gitImg {
+    width: 35px;
+    height: 35px;
+}
+
+footer {
+    position: relative;
+    width: 0%;
+    /* height: 10%; */
+    background: #2a3038;
+    border-radius: 20px;
+    margin: 10 auto 0;
+    box-sizing: border-box;
 }
