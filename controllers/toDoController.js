@@ -25,7 +25,7 @@ var urlEncodedParser = bodyParser.urlencoded({
 
 module.exports = function (app) {
 
-    app.get('/todo', function (req, res) {
+    app.get('/', function (req, res) {
         //Get data from mongoDB and pass it to view
         Todo.find({}, function(err,data){
             if(err) throw err;
@@ -36,7 +36,7 @@ module.exports = function (app) {
         
     });
 
-    app.post('/todo', urlEncodedParser, function (req, res) {
+    app.post('/', urlEncodedParser, function (req, res) {
         //Get data from the view and add to mongoDB
         var newTodo = Todo({id: uuid(),item: req.body.item}).save(function(err,data){
             if(err) throw err;
@@ -44,7 +44,7 @@ module.exports = function (app) {
         });
     });
 
-    app.delete('/todo/:item', function (req, res) {
+    app.delete('/:item', function (req, res) {
         //Delete the requested/clicked item(in view) from mongoDB
         Todo.find({id: req.params.item}).remove(function(err,data){
             if(err) throw err;
