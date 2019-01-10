@@ -11,3 +11,4 @@
    - <b>[UUID](https://www.npmjs.com/package/uuid)</b> use ```npm install uuid```
    #### Optional 
    - <b>[Nodemon](https://www.npmjs.com/package/nodemon)</b> use ```npm install -g nodemon``` Helps to automatically restart the node application when file changes in the directory are detected.
+3. Once all the packages are installed you can use ```require('<whatever is required>')``` in the files to get access to that package and its functionality. 
