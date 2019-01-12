@@ -12,6 +12,7 @@ app.use(express.static('./assets'));
 toDoController(app);
 
 //Listening to port
+/*Setting environment port variable that store port of the server if available or else it will listen port 8080*/
 const port = process.env.PORT || 8080;
 app.listen(port);
 console.log('*****STARTED*****');
