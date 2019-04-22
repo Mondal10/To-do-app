@@ -33,16 +33,39 @@ input[type="text"] {
 }
 
 button {
-    padding: 20px;
-    width: 30%;
     float: left;
-    background: #4c5661;
     border: 0;
-    border-radius: 20px;
     box-sizing: border-box;
     color: #fff;
     cursor: pointer;
     font-size: 20px;
+}
+
+.add {
+    width: 30%;
+    padding: 20px;
+    border-radius: 20px;
+    background: #4c5661;
+}
+
+.remove {
+    padding: 10px;
+    border-radius: 30%;
+    background: crimson;
+}
+
+.view-table-cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.remove-btn-holder {
+    width: 5%;
+    cursor: pointer;
+}
+
+.text-list {
+    width: 95%;
 }
 
 ul {
@@ -54,10 +77,10 @@ ul {
 li {
     width: 100%;
     padding: 20px;
+    display: table;
     box-sizing: border-box;
     font-family: arial;
     font-size: 20px;
-    cursor: pointer;
     letter-spacing: 1px;
 }
 

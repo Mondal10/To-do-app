@@ -17,9 +17,9 @@ $(document).ready(function () {
         return false;
     });
 
-
-    $('li').on('click', function () {
+    $('.remove').on('click', function () {
         var itemId = $(this).attr('id');
+        console.log($(this).attr('id'));
         $.ajax({
             type: 'DELETE',
             url: '/' + itemId,

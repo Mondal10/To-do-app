@@ -15,12 +15,17 @@
     <div id="todo-table">
         <form>
             <input type="text" name="item" placeholder="Add new Item here" required />
-            <button type="submit">+ Add</button>
+            <button class="add" type="submit">+ Add</button>
         </form>
         <ul>
             <% todos.forEach(function(todo){ %>
-            <li id=<%= todo.id %>>
-                <%= todo.item %>
+            <li>
+                <div class="view-table-cell remove-btn-holder">
+                    <button class="remove" type="submit" id=<%= todo.id %>>X</button>
+                </div>
+                <div class="view-table-cell text-list">
+                    <%= todo.item %>
+                </div>
             </li>
             <% }); %>
         </ul>
