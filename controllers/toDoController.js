@@ -4,7 +4,8 @@ var uuid = require('uuid/v1');
 var mongoose = require('mongoose');
 
 //Connect to the database of mlab
-mongoose.connect('mongodb://test123456:test123456@ds127978.mlab.com:27978/to-do-app', { useNewUrlParser: true });
+// mongoose.connect('mongodb://test123456:test123456@ds127978.mlab.com:27978/to-do-app', { useNewUrlParser: true });
+mongoose.connect('mongodb+srv://test123456:test123456@to-do-app.zs8gh.mongodb.net/to-do-app?retryWrites=true&w=majority', { useNewUrlParser: true });
 
 //Create a database schema
 var todoSchema = new mongoose.Schema({
